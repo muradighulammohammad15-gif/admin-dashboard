@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+    
+    <div class="grid-container">
+
+        <!-- Header -->
+        <header class="header">
+            <div class="menu-icon" onclick="openSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <div class="header-left">
+                <i class="fa fa-search"></i>
+            </div>
+            <div class="header-right">
+                <i class="fa-regular fa-bell"></i>
+                <i class="fa-regular fa-envelope"></i>
+                <i class="fa-regular fa-circle-user"></i>
+            </div>
+            
+            
+    
+        </header>
+        <!-- End Header -->
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                     
+                    <i class="fa fa-newspaper"></i>    Bob's Inventory
+                </div>
+                <i class="fa fa-xmark" onclick="closeSidebar()"></i>
+            </div>
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    
+                    <i class="fa fa-indent"></i>    Dashboard
+                </li>
+                <li class="sidebar-list-item">
+                     
+                    <i class="fa fa-shop"></i>    Products
+                </li>
+                <li class="sidebar-list-item">
+                     
+                    <i class="fa fa-clipboard"></i>    Inventory
+                </li>
+                <li class="sidebar-list-item">
+            
+                    <i class="fa fa-cart-plus"></i>    Purchase Orders
+                </li>
+                <li class="sidebar-list-item">
+                    
+                    <i class="fa fa-cart-shopping"></i>    Sales Orders
+                </li>
+                <li class="sidebar-list-item">
+                     
+                   <!-- <i class="fa fa-list"></i> --> 
+                    <i class="fa fa-file"></i>    Reports
+                </li>
+                <li class="sidebar-list-item">
+                    <i class="fa fa-gear"></i>    Settings
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
+
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <p class="font-weight-bold">DASHBOARD</p>
+            </div>
+
+            <div class="main-cards">
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary">PRODUCTS</p>
+                        <i class="fa fa-clipboard text-blue"></i>
+                    </div>
+                    <span class="text-primary font-weight-bold">249</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary">PURCHASE ORDERS</p>
+                        
+                        <i class="fa fa-cart-plus text-orange"></i>
+                    </div>
+                    <span class="text-primary font-weight-bold">83</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary">SALES ORDERS</p>
+                        <i class="fa fa-cart-shopping text-green"></i>
+                       
+                    </div>
+                    <span class="text-primary font-weight-bold">79</span>
+                </div>
+
+                <div class="card">
+                    <div class="card-inner">
+                        <p class="text-primary">INVENTORY ALERTS</p>
+                        <i class="fa fa-bell text-red"></i>
+                    </div>
+                    <span class="text-primary font-weight-bold">56</span>
+                </div>
+            </div>
+
+            <div class="charts">
+                <div class="charts-card">
+                    <p class="chart-title">Top 5 Products</p>
+                    <canvas id="bar-chart"></canvas>
+                </div>
+
+                <div class="charts-card">
+                    <p class="chart-title">Purchase and Sales Orders</p>
+                    <canvas id="area-chart"></canvas>
+                </div>
+            </div>
+
+
+
+            <!-- <h1>Hello, World!</h1>
+            <i class="fa fa-search"></i>
+            <i class="fa fa-fw fa-user"></i>
+            <i class="fab fa-facebook" ></i>
+            <i class="fa fa-home"></i>    
+             -->
+    
+        </main>
+        
+        <!-- End Main -->
+    </div>
+
+
+    <!-- Scripts -->
+    <!-- ApexCharts -->
+    <script src="js/chart.umd.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/scripts.js"></script>
+</body>
+</html>
