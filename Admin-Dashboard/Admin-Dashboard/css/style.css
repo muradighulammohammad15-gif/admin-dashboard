@@ -200,7 +200,6 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .charts-card {
@@ -212,7 +211,6 @@ body {
     border: 1px solid #d2d2d3;
     border-radius: 5px;
     box-shadow: 0 6px 7px -4px rgba(0, 0, 0, 0.2);
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .chart-title {
@@ -221,5 +219,4 @@ body {
     justify-content: center;
     font-size: 22px;
     font-weight: 600;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }

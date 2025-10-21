@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
+    <title>Admin Dashboard2</title>
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./ghulam.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/fontawesome.min.css">
 </head>
@@ -21,10 +21,9 @@
                 <i class="fa-solid fa-bars"></i>
             </div>
             <div class="header-left">
-                <i class="fa fa-search"></i>
+                <i class="fa fa-search" onclick="window.location.href='cha.html'"></i>
             </div>
             <div class="header-right">
-                <a href="cha.html">Go next page</a>
                 <i class="fa-regular fa-bell"></i>
                 <i class="fa-regular fa-envelope"></i>
                 <i class="fa-regular fa-circle-user"></i>
@@ -50,10 +49,8 @@
                     <i class="fa fa-indent"></i>    Dashboard
                 </li>
                 <li class="sidebar-list-item">
-                        <i class="fa fa-shop" onclick="window.location.href='cha.html'"></i>  
+                        <i class="fa fa-shop"></i>  
                           Products
-                        <!-- رفتن به صفحه بعد -->
-                    <!-- <i class="fa fa-shop"></i>    Products -->
                 </li>
                 <li class="sidebar-list-item">
                      
@@ -132,19 +129,19 @@
                     <canvas id="area-chart"></canvas>
                 </div>
                 <div class="charts-card">
-                    <p class="chart-title">Top 5 Products</p>
+                    <p class="chart-title">نمودار دونات</p>
                     <canvas id="doughnut-chart"></canvas>
                 </div>
                 <div class="charts-card">
-                    <p class="chart-title">Top 5 Products</p>
+                    <p class="chart-title">نمودار دایره ای</p>
                     <canvas id="pie-chart"></canvas>
                 </div>
                 <div class="charts-card">
-                    <p class="chart-title">Top 5 Products</p>
+                    <p class="chart-title">نمودار راداری</p>
                     <canvas id="radar-chart"></canvas>
                 </div>
                 <div class="charts-card">
-                    <p class="chart-title">Top 5 Products</p>
+                    <p class="chart-title">نمودارقطبی</p>
                     <canvas id="polararea-chart"></canvas>
                 </div>
             </div>
@@ -174,6 +171,6 @@
     <script src="js/chart.umd.js"></script>
 
     <!-- Custom JS -->
-    <script src="js/scripts.js"></script>
+    <script src="./ghulam.js"></script>
 </body>
 </html>

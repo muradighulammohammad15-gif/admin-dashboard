@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آیکون جستجو با لیست نمودارها</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fontawesome.min.css">
+    <script src="js/chart.umd.js"></script>
+    <link rel="stylesheet" href="./cha.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <i class="fa fa-indent"></i>
+                <span>  پنل تحلیل داده</span>
+                <div class="go">
+                    <a href="ghulam.html">رفتن به صفحه بعد</a>
+                </div>
+                
+            </div>
+            <div class="search-container">
+                <button class="search-icon" id="searchBtn">
+                    <i class="fa fa-search"></i>
+                </button>
+                <div class="search-dropdown" id="searchDropdown">
+                    <input type="text" class="search-input" id="searchInput" placeholder="جستجوی نمودار...">
+                    <div class="charts-list" id="chartsList">
+                        <div class="empty-state" id="emptyState">
+                            برای مشاهده نمودارها، نام آن ها را در فیلد بالا جستجو کنید
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="chart-page" id="chartPage">
+            <div class="chart-header">
+                <button class="back-button" id="backButton">
+                    <i class="fa fa-xmark"></i>   
+                     بازگشت
+                </button>
+                <h2 class="chart-title" id="chartPageTitle">نمودار</h2>
+                <div></div>
+            </div>
+            <div class="chart-wrapper">
+                <canvas id="chartCanvas"></canvas>
+            </div>
+            <div class="chart-description" id="chartDescription">
+            </div> 
+         </div>
+        <div class="footer">
+            <p>کلیه حقوق محفوظ است &copy; ۲۰۲۵ - پنل تحلیل داده</p>
+        </div>
+    </div>
+
+    <script src="./cha.js"></script>
+    
+</body>
+</html>
