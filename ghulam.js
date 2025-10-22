@@ -528,4 +528,193 @@ var myChart1 = new Chart(
     }
 )
 
+const scatterCtx = document.querySelector('#scatter-chart');
+const scatterChart = new Chart(
+    scatterCtx, {
+        type: 'scatter',
+        data: {
+            datasets: [{
+                label: 'نمونه دیتاست',
+                data: [
+                    {x: 10, y: 20},
+                    {x: 15, y: 10},
+                    {x: 22, y: 28},
+                    {x: 30, y: 35},
+                    {x: 25, y: 18},
+                    {x: 40, y: 45},
+                    {x: 8, y: 15 },
+                    {x: 13, y: 21},
+                    {x: 33, y: 17},
+                    {x: 11, y: 24},
+                    {x: 3, y: 7  },
+                    {x: 37, y: 16}
+                ],
+                pointBackgroundColor: ['coral', 'pink', 'navy', 'lightgreen', 'lightblue', 'crimson', 'red',
+                    'dark', 'purple', 'darkred', 'green', 'black'
+                ],
+                pointBorderColor: 'rgba(255,255, 255, 0.9)',
+                pointBorderWidth: 5,
+                pointRadius: 10,
+                showLine: false
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                tooltip: {
+                    intersect: false,
+                    callbacks: {
+                        label:
+                        function(context) {
+                            const x = context.raw.x;
+                            const y = context.raw.y;
+                            return `x: ${x} - y: ${y}`;
+                        }
+                    }
+                },
+                legend: {
+                    position: 'top',
+                    labels: {
+                        color: '#333',
+                        font: {
+                            size: 15,
+                            family: 'Tahoma',
+                            weight: 'bold'
+                        }
+                    }
+                },
+                title: {
+                    display:true,
+                    position: 'bottom',
+                    text: 'برای نشان دادن ارتباط بین دو متغیر عددی (مثلا قد در برابر وزن)',
+                    color: '#333',
+                    font: {
+                        size: 13,
+                        family: 'Tahoma'
+                    }
+                },  
+            },
+             scales: {
+                x: {
+                     beginAtZero: true,
+                 ticks: {
+                     color: 'darkred',
+                     font: {
+                         size: 15,
+                         weight: 'bold'
+                     }
+                 },
+                 grid: {
+                     color: 'rgba(200, 0, 0, 0.1)'
+                 }
+                },
+                y: {
+                    beginAtZero: true,
+                 ticks: {
+                     color: 'green',
+                     font: {
+                         size: 15
+                     }
+                 },
+                 grid: {
+                     color: 'rgba(0, 100, 0, 0.2)'
+                 }
+                }
+             }
+        }
+    }
+);
+
+
+const bubbleCtx = document.querySelector('#bubble-chart');
+const bubbleChart = new Chart(
+    bubbleCtx, {
+        type: 'bubble',
+        data: {
+            datasets: [{
+                label: 'نمونه حبابی',
+                data: [
+                    {x: 10, y: 20, r: 8 },
+                    {x: 15, y: 10, r: 12},
+                    {x: 22, y: 28, r: 6 },
+                    {x: 30, y: 35, r: 18},
+                    {x: 25, y: 18, r: 10},
+                    {x: 40, y: 45, r: 22},
+                    {x: 5,  y: 8,  r:5  },
+                    {x: 12, y: 9,  r: 9 }
+                ],
+                backgroundColor: ['lightblue', 'crimson', 'red',
+                    'dark', 'purple', 'darkred', 'green', 'black'],
+                    borderColor: 'rgba(255, 99, 132, 1)',
+                    borderWidth: 1
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: true,
+            plugins: {
+                tooltip: {
+                    intersect: false,
+                    callbacks: {
+                        label:
+                        function(context) {
+                            const d = context.raw;
+                            return `x: ${d.x} - y: ${d.y} - size: ${d.r}`;
+                        }
+                    }
+                },
+                legend: {
+                    position: 'top',
+                    labels: {
+                        color: '#333',
+                        font: {
+                            size: 15,
+                            family: 'Tahoma',
+                            weight: 'bold'
+                        }
+                    }
+                },
+                title: {
+                    display:true,
+                    position: 'bottom',
+                    text: 'یک مقدار سوم (حجم یا اندازه) دارد که با اندازه ی حباب نمایش داده می شود',
+                    color: '#333',
+                    font: {
+                        size: 13,
+                        family: 'Tahoma'
+                    }
+                },  
+            },
+             scales: {
+                x: {
+                     beginAtZero: true,
+                 ticks: {
+                     color: 'darkred',
+                     font: {
+                         size: 15,
+                         weight: 'bold'
+                     }
+                 },
+                 grid: {
+                     color: 'rgba(200, 0, 0, 0.1)'
+                 }
+                },
+                y: {
+                    beginAtZero: true,
+                 ticks: {
+                     color: 'green',
+                     font: {
+                         size: 15
+                     }
+                 },
+                 grid: {
+                     color: 'rgba(0, 100, 0, 0.2)'
+                 }
+                }
+             }
+        }
+    }
+)
+
 
